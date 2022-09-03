@@ -89,8 +89,10 @@ ul {
   background-color: #e5e5e5;
 }
 
-.filter__btn {
-  cursor: pointer;
+@media screen and (min-width: 1200px) {
+  .filter__btn {
+    cursor: pointer;
+  }
 }
 
 button {
@@ -319,6 +321,7 @@ button {
 }
 
 .header {
+  position: relative;
   border-bottom: 1px solid #ececec;
   background-color: var(--local-color);
 }
@@ -425,6 +428,43 @@ button {
 }
 .contacts__link:hover, .contacts__link:focus {
   color: var(--second-header-color);
+}
+
+.mob-menu {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--local-color);
+}
+
+.mob-contacts__tel-link {
+  font-weight: 500;
+  font-size: 34px;
+  line-height: 1.18;
+  letter-spacing: 0.02em;
+  color: var(--second-header-color);
+  text-decoration: none;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.mob-contacts__tel-link:hover, .mob-contacts__tel-link:focus {
+  color: var(--second-header-color);
+}
+
+.mob-contacts__mail-link {
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 1.17;
+  letter-spacing: 0.02em;
+  color: var(--second-header-color);
+  text-decoration: none;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.mob-contacts__mail-link:hover, .mob-contacts__mail-link:focus {
+  color: var(--header-color);
+}
+
+.mob-soc {
+  display: flex;
 }
 
 .address {
@@ -623,7 +663,6 @@ button {
   margin-bottom: 16px;
 }
 .team__list {
-  display: flex;
   justify-content: center;
 }
 .team__container {
